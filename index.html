@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boop My Nose</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+#container{
+    position:relative;
+    display:inline-block;
+}
+
+img{
+    max-width:100vw;
+    max-height:100vh;
+    display:block;
+}
+
+/* Invisible button over the nose */
+#nose{
+    position:absolute;
+    left:49%;
+    top:38%;
+    width:10%;
+    height:12%;
+    transform:translate(-50%,-50%);
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+    <img src="IMG-20260715-WA0002.jpg" alt="Face">
+    <div id="nose"></div>
+</div>
+
+<script>
+document.getElementById("nose").addEventListener("click", function () {
+    alert("Boop! You tapped my nose 👃");
+});
+</script>
+
+</body>
+</html>
